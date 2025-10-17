@@ -1,0 +1,150 @@
+<!-- About window content (fragment injected inside .xp-window by the desktop) -->
+<div class="xp-titlebar handle">
+  <div class="title-left">
+    <img class="win-icon" src="Images/about_me.png" alt="">
+    <span class="title-text">About Me</span>
+  </div>
+  <div class="title-buttons">
+    <button class="btn min" aria-label="Minimize">_</button>
+    <button class="btn max" aria-label="Maximize">🗗</button>
+    <button class="btn close" aria-label="Close">X</button>
+  </div>
+</div>
+
+<div class="xp-menubar" role="navigation" aria-label="Menu">
+  <span class="menu-item">File</span>
+  <span class="menu-item">Edit</span>
+  <span class="menu-item">View</span>
+  <span class="menu-item">Help</span>
+</div>
+
+<!-- Toolbar: two rows -->
+<div class="xp-toolbar">
+  <!-- Row 1: static Back/Forward + real buttons, all left aligned -->
+  <div class="tb-row tb-left-only">
+    <span class="nav-static">
+      <img src="Images/back.png" alt="" class="tb-ico"> Back
+    </span>
+    <span class="nav-static">
+      <img src="Images/forward.png" alt="" class="tb-ico"> Forward
+    </span>
+
+    <button class="tb-btn" id="openProjects">My Projects</button>
+    <button class="tb-btn" id="openResume">My Resume</button>
+  </div>
+
+  <!-- Row 2: full-width address bar with icon -->
+  <div class="tb-row address-row">
+    <label class="addr-label" for="addr">Address</label>
+
+    <div class="addr-field">
+      <img src="Images/about_me.png" alt="" class="addr-ico">
+      <span class="addr-text">About Me</span>
+      <select id="addr" class="addr-native" aria-label="Address">
+        <option selected>About Me</option>
+      </select>
+    </div>
+
+    <button class="tb-btn go">Go</button>
+  </div>
+</div>
+
+<div class="xp-content">
+  <!-- Sidebar -->
+  <aside class="sidebar" aria-label="Details sidebar">
+    <section class="panel">
+      <header class="panel-head">
+        <span class="panel-title">Social Links</span>
+        <button class="panel-caret" aria-label="Collapse">◢</button>
+      </header>
+      <ul class="panel-list">
+        <li>
+          <a class="link-row" href="https://www.instagram.com/eakanshbhardwaj" target="_blank" rel="noreferrer noopener">
+            <img class="soc-ico" src="Images/instagram.png" alt=""> Instagram
+          </a>
+        </li>
+        <li>
+          <a class="link-row" href="https://github.com/eaclix" target="_blank" rel="noreferrer noopener">
+            <img class="soc-ico" src="Images/github.png" alt=""> Github
+          </a>
+        </li>
+        <li>
+          <a class="link-row" href="https://www.linkedin.com/in/eakanshbhardwaj" target="_blank" rel="noreferrer noopener">
+            <img class="soc-ico" src="Images/linkedin.png" alt=""> LinkedIn
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <header class="panel-head">
+        <span class="panel-title">Skills</span>
+        <button class="panel-caret" aria-label="Collapse">◢</button>
+      </header>
+      <ul class="panel-list">
+        <li><img class="list-ico" src="Images/c++.png" alt=""> C++</li>
+        <li><img class="list-ico" src="Images/python.png" alt=""> Python</li>
+        <li><img class="list-ico" src="Images/sql.png" alt=""> SQL</li>
+        <li><img class="list-ico" src="Images/js.png" alt=""> Javascript</li>
+        <li><img class="list-ico" src="Images/dsa.png" alt=""> DSA</li>
+        <li><img class="list-ico" src="Images/os.png" alt=""> Operating Systems</li>
+        <li><img class="list-ico" src="Images/cn.png" alt=""> Computer Networks</li>
+        <li><img class="list-ico" src="Images/ps.png" alt=""> Problem Solving</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <header class="panel-head">
+        <span class="panel-title">Software</span>
+        <button class="panel-caret" aria-label="Collapse">◢</button>
+      </header>
+      <ul class="panel-list">
+        <li><img class="list-ico" src="Images/vscode.png" alt=""> VS Code</li>
+        <li><img class="list-ico" src="Images/claudeai.png" alt=""> Claude</li>
+        <li><img class="list-ico" src="Images/chatgpt1.png" alt=""> ChatGPT</li>
+        <li><img class="list-ico" src="Images/github.png" alt=""> Git/GitHub Copilot</li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- Main pane (scrollable) -->
+  <main class="main-pane" role="region" aria-label="About content">
+    <h1>About Me</h1>
+
+    <!-- Point 1 -->
+    <section class="point">
+      <img class="point-ico" src="Images/1st.png" alt="">
+      <p>
+        I’m Eakansh Bhardwaj, a Computer Science Engineer from Haryana, India. I tackle diverse technical challenges and focus on bringing ideas to life, whether that means solving problems for clients or exploring ambitious concepts like building websites or developing machine learning models. My foundation was laid at Vivekanand Public School, Sonipat, where sports and academics taught me discipline, teamwork, and the value of working toward something bigger than myself.
+      </p>
+    </section>
+
+    <!-- Point 2 -->
+    <section class="point">
+      <img class="point-ico" src="Images/2nd.png" alt="">
+      <p>
+        While growing up in India, I witnessed the power of technology evolving day by day through new innovations. Every small step toward digitization carried the weight of a nation’s pride. It inspired me to solve real-life problems and create something truly helpful for people.
+      </p>
+    </section>
+
+    <!-- Point 3 -->
+    <section class="point">
+      <img class="point-ico" src="Images/3rd.png" alt="">
+      <p>
+        After committing to technology, I completed my Bachelor of Engineering in Computer Science at Chandigarh University and began working on various projects, developing machine learning models, and conducting research in the tech field to help address different medical challenges. My recent work collaborating with AI tools has opened up new opportunities, allowing me to build more complex and impactful web experiences.
+      </p>
+    </section>
+
+    <!-- Point 4 -->
+    <section class="point">
+      <img class="point-ico" src="Images/4th.png" alt="">
+      <p>
+        I first discovered focus, discipline, and the drive to constantly push standards through playing sports, and coding brought all of that back. I’m obsessed with details, process, and raising my own bar with every project. My goal is to create work that has a lasting impact.
+      </p>
+    </section>
+  </main>
+</div>
+
+<div class="xp-status" role="contentinfo">
+  <span>Learn more about Eakansh</span>
+</div>

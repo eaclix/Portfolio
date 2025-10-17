@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Splash</title>
+
+  <!-- Auto-redirect after 2s as fallback -->
+  <meta http-equiv="refresh" content="2; url=eakansh.html" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Make entire splash non-interactive, but keep timed redirect working */
+    body { pointer-events: none; user-select: none; } /* non-clickable splash [web:49] */
+
+    /* Hide home-page content pieces on splash */
+    .logo-section,
+    .instruction,
+    .user-box,
+    .restart-section,
+    .footer-text {
+      display: none !important; /* remove from layout [web:59][web:69] */
+    }
+
+    /* Reuse the same container, but center a single word in the middle area */
+    .middle-section {
+      justify-content: center;       /* center horizontally [web:31][web:33] */
+    }
+
+    /* A dedicated center wrapper to vertically and horizontally center text */
+    .center-welcome {
+      display: flex;                 /* become flex item wrapper [web:34] */
+      align-items: center;           /* vertical center [web:31] */
+      justify-content: center;       /* horizontal center [web:31] */
+      width: 100%;
+      min-height: 200px;
+      text-align: center;
+    }
+
+    .welcome-text {
+      font-size: 2.9rem;
+      font-style: italic;            /* italic WELCOME [web:12] */
+      color: white;
+      letter-spacing: 2px;
+      opacity: 0.95;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="top-bar"></header>
+
+  <!-- Divider Line Below Header -->
+  <div class="divider"></div>
+
+  <div class="login-screen">
+    <div class="middle-section">
+      <!-- Only center text, no images/videos/buttons -->
+      <div class="center-welcome">
+        <span class="welcome-text">welcome</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider Line Above Footer -->
+  <div class="divider"></div>
+
+  <!-- Footer Bar (hidden content via CSS above) -->
+  <footer class="bottom-bar">
+    <div class="restart-section"></div>
+    <p class="footer-text"></p>
+  </footer>
+
+  <script>
+    // Primary timed redirect; meta refresh is a fallback
+    setTimeout(() => {
+      window.location.href = 'eakansh.html';
+    }, 2000);
+  </script>
+</body>
+</html>

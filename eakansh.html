@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eakansh XP</title>
+  <link rel="stylesheet" href="eakansh.css">
+  <script src="eakansh.js" defer></script>
+</head>
+<body class="xp-desktop">
+  <!-- Desktop icons -->
+  <nav class="desktop-icons" aria-label="Desktop icons">
+    <button class="desktop-icon" id="openAbout">
+      <img src="Images/about_me.png" alt="About Me">
+      <span>About Me</span>
+    </button>
+
+    <a class="desktop-icon" href="#">
+      <img src="Images/pdf.png" alt="My Resume">
+      <span>My Resume</span>
+    </a>
+
+    <a class="desktop-icon" href="#">
+      <img src="Images/explorer.png" alt="My Projects">
+      <span>My Projects</span>
+    </a>
+
+    <a class="desktop-icon" href="#">
+      <img src="Images/contact.png" alt="Contact Me">
+      <span>Contact Me</span>
+    </a>
+  </nav>
+
+  <!-- Host where the About window will be injected -->
+  <div id="aboutHost"></div>
+
+  <!-- Taskbar -->
+  <div class="xp-taskbar" role="contentinfo" aria-label="Windows XP toolbar">
+    <div class="xp-start" aria-hidden="true">
+      <img class="start-flag" src="Images/windows_logo.png" alt="Windows logo">
+      <span class="start-text">start</span>
+    </div>
+
+    <div class="taskbar-buttons" id="taskButtons"></div>
+
+    <div class="xp-tray">
+      <div class="mini-tray">
+        <button class="tray-icon tooltip" id="infoIcon" aria-label="Info">
+          <img src="Images/info.png" alt="Info">
+          <span class="tooltiptext">Click to view 'welcome'</span>
+        </button>
+        <button class="tray-icon" id="soundIcon" aria-label="Sound">
+          <img id="soundImg" src="Images/volume.png" alt="Sound">
+        </button>
+        <button class="tray-icon" id="fullIcon" aria-label="Fullscreen">
+          <img id="fullImg" src="Images/fullscreen.png" alt="Fullscreen">
+        </button>
+      </div>
+      <span id="xpClock" class="clock">--:-- --</span>
+    </div>
+  </div>
+
+  <!-- Welcome popup -->
+  <div class="tray-popup" id="welcomePopup" role="dialog" aria-live="polite" aria-hidden="true">
+    <div class="popup-content">
+      <div class="popup-header">
+        <img src="Images/info.png" alt="" class="popup-icon">
+        <strong>Welcome to Eakansh XP</strong>
+      </div>
+      <div class="popup-body">
+        A faithful XP-inspired interface, custom-built to showcase my work and attention to detail.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

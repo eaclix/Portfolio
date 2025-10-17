@@ -1,0 +1,161 @@
+/* About window interior styles */
+:root{
+  --luna-blue-1:#245edb;
+  --luna-blue-2:#3a78f2;
+  --panel-blue-1:#1f5fd7;
+  --panel-blue-2:#3a67cc;
+  --border:#8aa7e6;
+}
+
+/* Title bar */
+.xp-titlebar{
+  display:flex;justify-content:space-between;align-items:center;padding:6px 10px;color:#fff;
+  background:linear-gradient(180deg,var(--luna-blue-1),var(--luna-blue-2));
+  border-bottom:1px solid rgba(0,0,0,.25)
+}
+.title-left{display:flex;align-items:center;gap:8px}
+.win-icon{width:18px;height:18px;object-fit:contain}
+.title-text{font-weight:700;text-shadow:0 1px 1px rgba(0,0,0,.4)}
+.title-buttons{display:flex;gap:6px}
+.btn{
+  border:1px solid #133a95;background:linear-gradient(180deg,#4f83f0,#2b63d9);
+  color:#fff;padding:2px 9px;border-radius:3px;font-weight:700;cursor:pointer;text-shadow:0 1px 0 rgba(0,0,0,.4)
+}
+.btn.close{background:linear-gradient(180deg,#ff6a6a,#e33)}
+.btn:active{transform:translateY(1px)}
+.btn.max.pressed{ filter:brightness(0.9) }
+
+/* Menubar */
+.xp-menubar{
+  display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,#fdfefe,#edf3ff);
+  padding:6px 12px;border-bottom:1px solid #c9d5ef;color:#1b2d66;font-size:14px
+}
+
+/* Toolbar: two rows */
+.xp-toolbar{
+  display:flex;flex-direction:column;gap:6px;padding:8px 10px;
+  background:linear-gradient(180deg,#f8fbff,#dee9fb);border-bottom:1px solid #c9d5ef
+}
+.tb-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-start}
+.tb-left-only{justify-content:left}
+.tb-row.address-row{
+  display:grid;
+  grid-template-columns:auto 1fr auto; /* label | field grows | Go */
+  gap:8px;
+  width:100%;
+}
+.nav-static{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 8px; color:#1b3f9b;
+}
+.tb-btn{
+  background:linear-gradient(180deg,#ffffff,#e8f0ff);border:1px solid var(--border);border-radius:4px;
+  padding:6px 10px;color:#1b3f9b;font-weight:600;cursor:pointer
+}
+.tb-btn.nav{display:inline-flex;align-items:center;gap:6px}
+.tb-ico{width:14px;height:14px;object-fit:contain}
+.tb-btn.go{background:linear-gradient(180deg,#f3ffe5,#d7f8b5);border-color:#9fc578;color:#2e5d13}
+.addr-label{font-size:13px;color:#3a4a7a;align-self:center}
+
+/* Address field with icon */
+.addr-field{
+  display:flex; align-items:center; gap:8px;
+  width:100%;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:6px 10px;
+  color:#1b3f9b;
+  min-height:34px;
+}
+.addr-ico{ width:16px; height:16px; object-fit:contain }
+.addr-text{ flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.addr-native{ position:absolute; opacity:0; pointer-events:none; width:1px; height:1px }
+
+/* Content split (outer shell provides total height; ensure shrink/scroll works) */
+.xp-content{
+  display:grid;grid-template-columns:260px 1fr;height:calc(100% - 120px);min-height:0
+}
+
+/* Sidebar */
+.sidebar{
+  background:linear-gradient(180deg,#eff4ff,#dfe9ff);
+  border-right:1px solid #c9d5ef;
+  padding:14px;
+  overflow:auto;
+  min-height:0;
+}
+.panel{
+  background:#f8fbff;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px;box-shadow:inset 0 1px 0 #fff
+}
+.panel-head{
+  display:flex;align-items:center;justify-content:space-between;padding:8px 10px;color:#fff;
+  background:linear-gradient(180deg,var(--panel-blue-1),var(--panel-blue-2));text-shadow:0 1px 0 rgba(0,0,0,.4)
+}
+.panel-title{font-weight:700}
+.panel-caret{border:10px;background:transparent;color:#fff;cursor:pointer;font-size:14px}
+.panel.collapsed .panel-list{display:none}
+.panel-list{list-style:none;margin:8px 10px 10px;padding:0;color:#1f2c57}
+.panel-list li{display:flex;align-items:center;gap:8px;padding:6px 4px;border-radius:4px}
+.panel-list li:hover{background:#eaf1ff}
+.list-ico{width:16px;height:16px;object-fit:contain}
+
+/* Social link icons */
+.link-row{display:inline-flex;align-items:center;gap:8px;color:#1f2c57;text-decoration:none}
+.link-row:hover{text-decoration:underline}
+.soc-ico{width:14px;height:14px;object-fit:contain}
+
+/* Main pane (entire area scrolls) */
+.main-pane{
+  padding:26px;color:#fff;min-height:0; /* critical for grid scrolling */
+  background:radial-gradient(1200px 600px at -10% -20%, #6b7aec 0%, #4e61d8 45%, #3b4ecf 100%),
+             linear-gradient(180deg,#425bc7,#5a6add);
+  overflow:auto;
+}
+.main-pane h1{font-size:42px;margin:6px 0 18px;text-shadow:0 2px 0 rgba(0,0,0,.25)}
+
+/* Points with larger left icons */
+.point{
+  display:grid;grid-template-columns:40px 1fr;align-items:flex-start;gap:14px;margin:22px 0
+}
+.point-ico{width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 1px 0 rgba(0,0,0,.25))}
+.point p{margin-left: 50px;line-height:1.65;font-size:19px;color:#f7fbff;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+
+/* Status bar */
+.xp-status{padding:8px 12px;background:linear-gradient(180deg,#ffffff,#f1f1f1);border-top:1px solid #bfc6d7;color:#3b4b73;font-size:13px}
+
+/* Dark-blue active task button */
+.task-btn.active-strong{
+  background: linear-gradient(180deg, #1f5fd7, #153e9e);
+  color: #ffffff;
+  border-color: #0e2b7b;
+}
+
+/* Resize handles (shown only when not maximized) */
+.xp-window .resize-h, .xp-window .resize-v, .xp-window .resize-nw, .xp-window .resize-ne, .xp-window .resize-sw, .xp-window .resize-se{
+  position:absolute; z-index:5;
+}
+.xp-window:not(.maximized) .resize-h{ cursor:ew-resize; top:0; bottom:0; width:6px }
+.xp-window:not(.maximized) .resize-v{ cursor:ns-resize; left:0; right:0; height:6px }
+.xp-window:not(.maximized) .resize-nw,
+.xp-window:not(.maximized) .resize-ne,
+.xp-window:not(.maximized) .resize-sw,
+.xp-window:not(.maximized) .resize-se{ width:10px; height:10px }
+
+.xp-window:not(.maximized) .resize-h.left{ left:-3px }
+.xp-window:not(.maximized) .resize-h.right{ right:-3px }
+.xp-window:not(.maximized) .resize-v.top{ top:-3px }
+.xp-window:not(.maximized) .resize-v.bottom{ bottom:-3px }
+
+.xp-window:not(.maximized) .resize-nw{ left:-4px; top:-4px; cursor:nwse-resize }
+.xp-window:not(.maximized) .resize-ne{ right:-4px; top:-4px; cursor:nesw-resize }
+.xp-window:not(.maximized) .resize-sw{ left:-4px; bottom:-4px; cursor:nesw-resize }
+.xp-window:not(.maximized) .resize-se{ right:-4px; bottom:-4px; cursor:nwse-resize }
+
+/* Responsive */
+@media (max-width:980px){ .xp-content{grid-template-columns:220px 1fr} }
+@media (max-width:760px){
+  .xp-content{grid-template-columns:1fr}
+  .sidebar{order:2}
+  .main-pane{order:1}
+}

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: #547de7;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Bar */
+.top-bar {
+  background-color: #00289e;
+  height: 100px;
+  width: 100%;
+}
+
+/* Horizontal Divider Line */
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Middle layout */
+.login-screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  max-width: 1100px;
+  color: white;
+}
+
+/* Left Side */
+.left-side {
+  text-align: left;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.xp-logo {
+  width: 140px;
+  height: 120px;
+  margin-left: 80px;
+}
+
+.logo-text .main-text {
+  font-size: 3rem;
+  font-weight: 600;
+  position: relative;
+  margin-left: 40px;
+}
+
+.xp {
+  color: red;
+  font-size: 2.2rem;
+  vertical-align: super;
+  margin-left: 4px;
+}
+
+.logo-text .sub-text {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-left: 40px;
+  margin-top: -6px;
+}
+
+.instruction {
+  margin-top: 20px;
+  margin-left: -70px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Right Side */
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-box {
+  background-color: transparent;
+  width: 280px;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  text-decoration: none;   /* safe if changed to anchor */
+  color: inherit;          /* safe if changed to anchor */
+}
+
+/* Hover shows box background */
+.user-box:hover {
+  background-color: #002cad;
+}
+
+/* 🎥 Video avatar */
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.user-info {
+  text-align: left;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+/* Role color transition */
+.user-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.9;
+  color: rgb(52, 3, 73);
+  transition: color 0.3s ease;
+}
+
+.user-box:hover .user-role {
+  color: orange;
+}
+
+/* Footer Bar */
+.bottom-bar {
+  background-color: #0029a3;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.restart-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Custom Restart Icon */
+.restart-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("Images/restart_button.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+
+.restart-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  text-align: right;
+  line-height: 1.4;
+}
